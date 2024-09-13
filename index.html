@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form </title>
+    <link rel="stylesheet" href="net.css">
+</head>
+
+<body>
+    <main>
+        <!-- Notification -->
+        <div class="notification success" id="notification">
+            <span class="icon">✔</span>
+            <p><strong>Message Sent!</strong><br>
+                Thanks for completing the form. We'll be in touch soon!
+            </p>
+        </div>
+
+        <form class="form-1" id="OnSub">
+            <h1>Contact Us</h1><br>
+
+            <!-- Name fields -->
+            <div class="name-1">
+                <div class="head-1">
+                    <label>First Name <span>*</span></label>
+                    <input type="text" maxlength="10" id="first-name">
+                    <span class="Warn">This Field is required</span>
+                </div>
+                <div class="head-2">
+                    <label>Last Name <span>*</span></label>
+                    <input type="text" maxlength="10" id="last-name">
+                    <span class="Warn">This Field is required</span>
+                </div>
+            </div>
+
+            <!-- Email Address -->
+            <label>Email Address <span>*</span></label>
+            <input type="email" id="email">
+            <span class="Warn" data-for="email">Please enter a valid email address.</span>
+
+            <!-- Query Type  -->
+            <label>Query Type <span>*</span></label><br>
+            <div class="query-type">
+                <div class="R-1">
+                    <input type="radio" id="enquiry" name="query" value="General Enquiry">
+                    <label for="enquiry">General Enquiry</label>
+                </div>
+                <div class="R-2">
+                    <input type="radio" id="support" name="query" value="Support Request">
+                    <label for="support">Support Request</label>
+                </div>
+            </div>
+            <span class="Warn">Please Select Query type</span><br>
+
+            <!-- Message textarea -->
+            <label>Message <span>*</span></label><br>
+            <textarea rows="5" id="message"></textarea><br><br>
+            <span class="Warn">This Field is required</span>
+
+            <!-- Consent checkbox -->
+            <div class="consent">
+                <input type="checkbox" id="consent">
+                <label for="consent">I consent to being contacted by the team *</label>
+            </div><br>
+            <span class="Warn">To submit this form, Please consent to be contacted</span>
+
+            <!-- Submit button -->
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
